@@ -1,0 +1,281 @@
+---
+// import Typed from 'typed.js';
+---
+
+<section id="about-me">
+    <div class="titlebar"><span class="material-symbols-outlined">
+        terminal
+        </span>root@hildankutomo - zsh
+    </div>
+        <p>root@hildankutomo: $ <span id="typed-output"></span></p>
+        <div id="command-output"></div>
+</section>
+<style>
+    section {
+        margin-top: -90px;
+        margin-bottom: 20px;
+        margin-left: 250px;
+        margin-right: 230px;
+        padding: 50px;
+        position: static;
+        border: 2px solid black;
+    }
+
+    #command-output {
+        /* font-size: 18px; */
+        text-align: justify
+    }
+
+    @media (max-width: 768px) {
+        section {
+            margin-top: -28px;
+            /* margin-bottom: 20px; */
+            margin-left: 40px;
+            margin-right: 18px;
+            /* padding: 50px; */
+            position: static;
+            border: 2px solid black;
+        }
+        
+        p {
+            font-size: 14px;
+            margin-left: -10px;
+        }
+
+        #command-output {
+            font-size: 14px;
+            text-align: justify
+        }
+    }
+
+/* .titlebar {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+} */
+
+/* button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+
+/* button:hover {
+    background-color: #555;
+} */
+
+</style>
+<script>
+    document.getElementById('aboutBtn').addEventListener('click', function() {
+        document.getElementById('command-output').innerHTML = "";
+
+        var typed = new Typed('#typed-output', {
+            strings: ["./about_me.sh"],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: function() {
+                // Menampilkan konten secara langsung setelah animasi perintah selesai
+                document.getElementById('command-output').innerHTML = `
+                    <p>
+                    Hello! I’m Hildan Kusto Utomo, a junior backend developer and third-year Computer Science student.
+                    Through my academic journey and personal projects, I’ve gained a growing interest in backend programming, especially with PHP and Javascript.
+                    I’m continuously learning how to build secure and scalable systems, while also exploring the fundamentals of cybersecurity to better understand how to safeguard applications from potential threats.    
+                    </p>
+                    <p>
+                        I’m also delving into DevOps practices to improve development workflows and better manage the deployment process.
+                        By combining backend development, security awareness, and a basic understanding of DevOps, I aim to contribute to projects that require both technical efficiency and security considerations.
+                    </p>
+                `;
+            }
+        });
+    });
+        document.getElementById('workExperienceBtn').addEventListener('click', function() {
+        document.getElementById('command-output').innerHTML = "";
+        
+        var typed = new Typed('#typed-output', {
+            strings: ["php work_experience.php"],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: function() {
+                document.getElementById('command-output').innerHTML = `
+                  
+                        <ul>
+                            <h1>Under Construction</h1>
+                            <li>Bercita Cita menjadi Pengoding Handal</li>
+                        </ul>
+
+                `;
+            }
+        });
+    });
+
+    document.getElementById('latestProjectsBtn').addEventListener('click', function() {
+        document.getElementById('command-output').innerHTML = "";
+        
+        var typed = new Typed('#typed-output', {
+            strings: ["go run projects.go"],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: function() {
+                document.getElementById('command-output').innerHTML = `
+
+    <div class="projects">
+        <div class="project-card">
+            <img src="https://drive.google.com/thumbnail?id=1F1VUL5iw5fkNImskzBlKGxxISnL0BZiK" Width="200px" alt="Project 1">
+            <h3>Trader Governance Information System</h3>
+            <span class="badge">Final Project</span>
+                    
+            <p>The Trader Governance Information System helps stakeholders manage and organize traders operating in public spaces like town squares and markets. It addresses issues of disorderly trading by streamlining trader registration, location assignment, and permit management, ensuring better regulation and smoother operations in public facilities.</p>
+        </div>
+        <div class="project-card">
+            <img src="https://wwebjs.dev/images/logo.png" Width="100px" alt="Project 1">
+            <h3>WhatsApp-based Customer Service Bot with GeminiAI Integration</h3>
+            <span class="badge">Final Project</span>
+            <p>This is the result of the final assignment to fulfill the "Artificial Intelligence" course. A WhatsApp-based customer service that is integrated into the GeminiAI service</p>
+        </div>
+        <div class="project-card">
+            <img src="https://wwebjs.dev/images/logo.png" Width="100px" alt="Project 1">
+            <h3>WhatsApp-based Village Service Customer Service Bot</h3>
+            <span class="badge">Freelance Project</span>
+            <p class="text-muted">This is a customer service for community services in the REDACTED village, REDACTED sub-district. This project consists of two parts, namely the Chat Bot System which was created using JavaScript with the help of the WhatsappWeb.js library and the Frontend and Backend which were created using PHP CodeIgniter4</p>
+        </div>
+        <div class="project-card">
+            <img src="https://drive.google.com/thumbnail?id=17LyCcpQDtAqxrARsMT6fvRL4XNvGgVKn" Width="200px" alt="Project 1">
+            <h3>ECVolunteers - E-Course Platform managed by Volunteer</h3>
+            <span class="badge">Competition Project</span>
+            <p>E-Courses Platform where this application is managed by Volunteers who are committed to volunteering their time to share knowledge in the form of learning modules..</p>
+        </div>
+        <div class="project-card">
+            <img src="https://marvel-b1-cdn.bc0a.com/f00000000236551/dt-cdn.net/wp-content/uploads/2021/07/13429_ILL_DevOpsLoop.png" Width="200px" alt="Project 1">
+            <h3>About Bash Scripting, Docker and Kubernetes</h3>
+            <span class="badge">Final Project</span>
+            <p>
+This project automates the deployment of containerized applications using Bash scripting, Docker, and Kubernetes. Bash scripts handle tasks like building Docker images, pushing them to a registry, and deploying to a Kubernetes cluster. Docker ensures consistent environments, while Kubernetes manages scaling and high availability. This approach streamlines and optimizes the deployment process.</p>
+        </div>
+        <div class="project-card">
+            <img src="https://raw.githubusercontent.com/hildanku/sitakeru/main/dokumentasi%20foto/dashboard.png" Width="200px" alt="Project 1">
+            <h3>Room Management System - XYZ University Case Study</h3>
+            <span class="badge">Final Project</span>
+            <p>is a final project to fulfill the “Human and Computer Interaction” course, the reason for developing this application is because in the [REDACTED] agency, room management still uses conventional methods, because it still uses conventional methods, room use clashes will probably occur.</p>
+        </div>
+    </div>
+<style>
+.projects {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+.project-card {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    /* margin: 10px 0; */
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+    .badge-container {
+    margin-top: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ccc; /* Warna abu-abu */
+    color: black;
+    border-radius: 15px;
+    font-size: 0.9em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+</style>
+
+                `;
+            }
+        });
+    });
+    document.getElementById('courseCertificationBtn').addEventListener('click', function() {
+
+        document.getElementById('command-output').innerHTML = "";
+
+        var typed = new Typed('#typed-output', {
+            strings: ["./courses_awards"],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: function() {
+                document.getElementById('command-output').innerHTML = `
+                        <ul>
+                            <li>Courses
+                                <ul>
+                                    <li>AWS Knowledge: Cloud Essentials - Amazon Web Services, May 2024</li>
+                                    <li>Microsoft Security, Compliance, and Identity Fundamentals - TalentaAI, Apr 2024</li>
+                                    <li>Learn to Build Microservices Architecture - IDCamp2023 x Dicoding, Mar 2024/li>
+                                    <li>Become a Linux System Administrator - IDCamp2023 x Dicoding, Feb 2024</li>
+                                    <li>Learning CI/CD Implementation - IDCamp2023 x Dicoding, Jan 2024</li>
+                                    <li>Cyber Security Course for Beginners - Cyber Warfare Labs, Sep 2023</li>
+                                </ul>
+                            </li>
+                            <li>Awards
+                                <ul>
+                                    <li>
+                                        "ECVolunters" - Software Development Competition @UPB Student Got Talent as a Participant - 2024
+                                         <a href="https://drive.google.com/file/d/1aMmv22jstkjVzI43oAjkVGNxwrXabASQ/view?usp=sharing" target="_blank">[View Certificate]</a>    
+                                    </li>
+                                    <li>
+                                        "SiTukik" - Hackfest2024 @Google Developer Student Clubs as a Hacker - 2024
+                                         <a href="https://drive.google.com/file/d/1YY22yOwzdkAKHhbX5BDXinVxVQy51QjI/view?usp=sharing" target="_blank">[View Certificate]</a>
+                                    </li>
+                                    <li>
+                                        DevOps Engineer Scholarship Awardee @IDCamp x Dicoding Indonesia - 2023
+                                     <a href="https://drive.google.com/file/d/1ZRM-bPcgWMY6jSxgDrc6XW7_y5Idu9MT/view?usp=sharing" target="_blank">[View Certificate]</a>    
+                                    </li>
+                                    <li>
+                                        "e-Bancor" - National IT Competition “Software Development” Informatics Vocational Festival (INVOFEST) @Politeknik Harapan Bersama Tegal as a Participant - 2023
+                                        <a href="https://drive.google.com/file/d/1YY22yOwzdkAKHhbX5BDXinVxVQy51QjI/view?usp=sharing" target="_blank">[View Certificate]</a>    
+                                    </li>
+                                    <li>
+                                        5th Place in KodokoalaMedia Bug Bounty @KodokoalaMedia - 2019
+                                        <a href="https://sec.kodokoalamedia.co.id/" target="_blank">[View Hall of Fame]</a>    
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                `;
+            }
+        });
+    });
+    document.getElementById('reachMeBtn').addEventListener('click', function() {
+        document.getElementById('command-output').innerHTML = "";
+        
+        var typed = new Typed('#typed-output', {
+            strings: ["python3 reach_me.py"],
+            typeSpeed: 50,
+            showCursor: false,
+            onComplete: function() {
+                document.getElementById('command-output').innerHTML = `
+                       <ul>
+                            <li>
+                                Email: 
+                                <q>
+                                    <a href="mailto:hildankutomo@gmail.com">
+                                    hildankutomo[at]gmail.com</a>
+                                </q>
+                            </li>
+                            <li>Linkedin: <a href="https://www.linkedin.com/in/hildankustoutomo/">Hildan K. Utomo</a></li>
+                            <li>Instagram: <a href="https://www.instagram.com/hildankutomo/">@hildankutomo</a></li></li>
+                            <li>Facebook: <a href="https://www.facebook.com/hldnku/">Hildan K. Utomo</a></li>
+                        </ul>
+                        <b> Thankyou for visiting my portfolio! </b>
+                `;
+            }
+        });
+    });
+</script>
